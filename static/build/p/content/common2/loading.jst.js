@@ -1,0 +1,1 @@
+define("guang/m-activity/0.0.99/p/content/common2/loading.jst",[],function(require,exports,module){module.exports=function(obj){obj||(obj={});var __p="";with(obj)__p+='<div class="loading">\n  \u6b63\u5728\u8bf7\u6c42...\n</div>';return __p}});

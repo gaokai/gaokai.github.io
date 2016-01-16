@@ -1,0 +1,1 @@
+define("guang/m-activity/0.0.99/p/panel/common/header.jst",[],function(require,exports,module){module.exports=function(obj){obj||(obj={});var __p="";with(obj)__p+='<div class="header">\n  <div class="back"><</div>\n  <div class="title"></div>\n  <div class="search">\u641c\u7d22</div>\n  <div class="message">\u672a\u5b8c\u6210</div>\n</div>';return __p}});
