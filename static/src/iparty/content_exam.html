@@ -4,14 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
 
-    <meta name="applicable-device" content="mobile">
-        <meta http-equiv="Content-Security-Policy" content="default-src *.meituan.com https://i.meituan.com/ https://ms0.meituan.com https://mc0.meituan.com 192.168.4.223:9999 *.maoyan.com  *.meituan.net www.google-analytics.com wvjbscheme://* imeituan://* *.dianping.com *.dpfile.com 'self' 'unsafe-inline' 'unsafe-eval' blob: data:;">
-
-    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name='apple-touch-fullscreen' content='yes'>
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no"/>
 
     <title>爱逛街</title>
@@ -29,6 +23,17 @@
 
     <script src="//g.alicdn.com/tb/kimi/0.0.233/kimi.js"></script>
     // <script inline src="../../build/p/content/exam/index.js"></script>
-    <script>$.use('guang/m-activity/0.0.99/p/content/exam/index');</script>
+    <script>
+        $.use('guang/m-activity/0.0.99/p/content/exam/index');
+        $(document).on('click', 'a', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var target = $(e.currentTarget);
+
+            if(target.attr('href')) {
+                window.location.href = target.attr('href');
+            }
+        })
+    </script>
 </body>
 </html>

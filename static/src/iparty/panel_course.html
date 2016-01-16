@@ -4,17 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Web Starter Kit">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no"/>
 
     <title>爱逛街</title>
@@ -34,8 +25,18 @@
     <div class="panel" id="cata-wrap"></div>
 
     <script src="//g.alicdn.com/tb/kimi/0.0.233/kimi.js"></script>
-    // <script inline src="../../build/p/panel/course/index.js"></script>
-    <script>$.use('guang/m-activity/0.0.99/p/panel/course/index');</script>
-    <!--<script>$.use('guang/m-activity/@VERSION@/p/panel/course/index');</script>-->
+    <script inline src="../../build/p/panel/course/index.js"></script>
+    <script>
+        $.use('guang/m-activity/0.0.99/p/panel/course/index');
+        $(document).on('click', 'a', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var target = $(e.currentTarget);
+
+            if(target.attr('href')) {
+                window.location.href = target.attr('href');
+            }
+        })
+    </script>
 </body>
 </html>
